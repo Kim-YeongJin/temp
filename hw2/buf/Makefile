@@ -8,7 +8,7 @@ INCDIR=../include
 LIBDIR=../lib
 
 $(LIB): $(OBJS)
-	$(CC) -fPIC -shared -Wl,-install_name $(LIBNAME).so.1 $(OBJS) -o $@ -lc
+	$(CC) -fPIC -shared -Wl,-soname=$(LIBNAME).so.1 $(OBJS) -o $@ -lc
 	cp $(LIB) $(LIBDIR)
 	ln -s $(LIBDIR)/$(LIBNAME).so.1.0 $(LIBDIR)/$(LIBNAME).so
 	ln -s $(LIBDIR)/$(LIBNAME).so.1.0 $(LIBDIR)/$(LIBNAME).so.1	

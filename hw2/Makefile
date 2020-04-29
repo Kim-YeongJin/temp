@@ -3,7 +3,7 @@ CFLAGS= -Wall
 OBJS = BufFileTest.o
 INCDIR=./include
 LIBDIR=./lib
-DIRS = buf fixed person var
+DIRS = buf fixed student coursereg var
 
 .PHONY: all clean
 
@@ -16,7 +16,7 @@ BufFileTest: $(OBJS)
 	do \
 		$(MAKE) -C $$d; \
 	done
-	$(CC) -o BufFileTest $(OBJS) -L$(LIBDIR) -lmybuffer -lmyfixed -lmyperson -lmyvar
+	$(CC) -o BufFileTest $(OBJS) -L$(LIBDIR) -lmybuffer -lmyfixed -lmystudent -lmycoursereg -lmyvar
 	export LD_LIBRARY_PATH=$(LIBDIR)
 
 clean:
