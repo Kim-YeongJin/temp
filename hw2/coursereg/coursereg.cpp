@@ -68,7 +68,7 @@ int coursereg::InitBuffer (LengthFieldBuffer & Buffer)
 
 void coursereg::Print (ostream & stream, char * label) const
 {
-	if (label == 0) stream << "Person:";
+	if (label == 0) stream << "Course Reg:";
 	else stream << label;
 	stream << "\n\t course_id '"<<course_id<<"'\n"
 		<< "\tstudent_id '"<<student_id<<"'\n"

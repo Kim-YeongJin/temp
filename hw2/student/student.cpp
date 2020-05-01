@@ -73,7 +73,7 @@ int student::InitBuffer (LengthFieldBuffer & Buffer)
 
 void student::Print (ostream & stream, char * label) const
 {
-	if (label == 0) stream << "Person:";
+	if (label == 0) stream << "Student:";
 	else stream << label;
 	stream << "\n\t id '"<<identifier<<"'\n"
 		<< "\tname '"<<name<<"'\n"
